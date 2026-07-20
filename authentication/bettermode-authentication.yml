@@ -1,0 +1,47 @@
+generated: '2026-07-18'
+method: searched
+source: https://developers.bettermode.com/docs/guide/graphql/getting-started/
+docs: https://developers.bettermode.com/docs/guide/
+description: >-
+  Bettermode's GraphQL API is authenticated with bearer access tokens passed on
+  the Authorization header. Two token classes are documented: App Access Tokens
+  (for installed apps acting server-to-server) and Member Access Tokens (acting
+  as a specific community member). Guest tokens grant limited unauthenticated
+  read access. There are no API keys or scopes in the classic OAuth sense; an
+  app's reach is bounded by the communities it is installed on and the
+  permissions granted at install time.
+summary:
+  types: [http]
+  scheme: bearer
+  token_classes: [App Access Token, Member Access Token, Guest Token]
+  transport: Authorization header
+schemes:
+  - name: AppAccessToken
+    type: http
+    scheme: bearer
+    description: >-
+      Issued to a Bettermode App; authenticates server-to-server requests. Scoped
+      to the communities the app is installed on. Managed from the developer
+      portal (app credentials).
+    sources: [https://developers.bettermode.com/docs/guide/apps/getting-started/]
+  - name: MemberAccessToken
+    type: http
+    scheme: bearer
+    description: >-
+      Authenticates requests as a specific community member; obtained through the
+      token/login GraphQL operations. Reflects that member's permissions.
+    sources: [https://developers.bettermode.com/docs/guide/graphql/getting-started/]
+  - name: GuestToken
+    type: http
+    scheme: bearer
+    description: >-
+      Limited token for unauthenticated (guest) access to public read operations.
+    sources: [https://developers.bettermode.com/docs/guide/graphql/getting-started/]
+endpoints:
+  us: https://api.bettermode.com
+  eu: https://api.bettermode.de
+notes: >-
+  All GraphQL requests are HTTP POST to the region endpoint with the bearer token
+  on the Authorization header. Apps are created and their credentials managed in
+  the developer portal (app.bettermode.com/portal); an app must have an owner
+  community and the creator must be an admin of at least one community.
