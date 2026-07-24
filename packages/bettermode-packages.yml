@@ -1,0 +1,56 @@
+generated: '2026-07-18'
+method: searched
+source: https://registry.npmjs.org — Bettermode (formerly Tribe) first-party client libraries, verified via the public npm registry API. HTTP status recorded at fetch time.
+description: >-
+  First-party Bettermode / Tribe Platform client libraries and tooling published
+  under the @tribeplatform npm scope. Bettermode's public API is GraphQL; the
+  gql-client is the primary server-side SDK, and the React SDK / UI Kit / Slate
+  Kit power embedded and app UI surfaces. All confirmed first-party (published by
+  the Bettermode/Tribe team).
+packages:
+  - language: javascript
+    registry: npm
+    name: "@tribeplatform/gql-client"
+    url: https://www.npmjs.com/package/@tribeplatform/gql-client
+    install: npm install @tribeplatform/gql-client
+    version: 2.3.7
+    description: A TypeScript client to interact with the Bettermode (Tribe) GraphQL API.
+    official: true
+    status: 200
+  - language: javascript
+    registry: npm
+    name: "@tribeplatform/react-sdk"
+    url: https://www.npmjs.com/package/@tribeplatform/react-sdk
+    install: npm install @tribeplatform/react-sdk
+    version: 2.2.0
+    description: React SDK for building on and embedding Bettermode communities.
+    official: true
+    status: 200
+  - language: javascript
+    registry: npm
+    name: "@tribeplatform/react-ui-kit"
+    url: https://www.npmjs.com/package/@tribeplatform/react-ui-kit
+    install: npm install @tribeplatform/react-ui-kit
+    version: 3.1.1
+    description: Tribe Platform React UI Kit — component library for Bettermode app/block UIs.
+    official: true
+    status: 200
+  - language: javascript
+    registry: npm
+    name: "@tribeplatform/slate-kit"
+    url: https://www.npmjs.com/package/@tribeplatform/slate-kit
+    install: npm install @tribeplatform/slate-kit
+    version: 2.0.8
+    description: Rendering/creating/editing/validating Bettermode "slates" (block layouts) plus import/export.
+    official: true
+    status: 200
+  - language: javascript
+    registry: npm
+    name: "@tribeplatform/cli"
+    url: https://www.npmjs.com/package/@tribeplatform/cli
+    source: https://github.com/tribeplatform/cli
+    install: npm install -g @tribeplatform/cli
+    version: 0.1.2-alpha
+    description: The CLI to manage apps on the Bettermode platform.
+    official: true
+    status: 200

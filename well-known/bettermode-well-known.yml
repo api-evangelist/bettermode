@@ -1,0 +1,27 @@
+generated: '2026-07-18'
+method: probed
+source: live HTTP probes of /.well-known/* across Bettermode hosts
+description: >-
+  Probe of the standard /.well-known/ discovery surface across Bettermode's
+  website, developer, and API hosts. None are published (all 404). Recorded for
+  auditability; no WellKnown/SecurityTxt pointer is emitted because nothing was
+  found.
+hosts:
+  - https://bettermode.com
+  - https://developers.bettermode.com
+  - https://api.bettermode.com
+documents:
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /.well-known/openid-configuration
+    status: 404
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+  - path: /.well-known/api-catalog
+    status: 404
+  - path: /.well-known/ai-plugin.json
+    status: 404
+notes: >-
+  Also probed https://bettermode.com/security.txt (404). Bettermode publishes a
+  security/compliance page at https://bettermode.com/security but no RFC 9116
+  security.txt.

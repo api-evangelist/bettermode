@@ -1,0 +1,66 @@
+generated: '2026-07-18'
+method: searched
+source: https://developers.bettermode.com/docs/guide/webhooks/getting-started/
+spec_type: Webhooks
+description: >-
+  Bettermode pushes event notifications to app-registered webhook endpoints as
+  HTTP POST requests with a JSON body. Subscriptions are configured per app in
+  the developer portal and only fire for communities the app is installed on.
+  Delivery is secured by a subscription-time challenge handshake plus an
+  X-Tribe-Signature HMAC header on every request. No AsyncAPI document is
+  published; this captures the webhook catalog.
+transport: HTTP POST (JSON body)
+security:
+  signature_header: X-Tribe-Signature
+  challenge_verification: >-
+    On subscription, Bettermode sends a POST containing a challenge token; the
+    endpoint must echo the token to confirm ownership.
+subscription:
+  where: Developer portal — app "Webhook subscriptions"
+  scope: Only triggers for communities the app is installed on.
+payload:
+  fields:
+    networkId: Community (network) identifier
+    context: Action context
+    type: TEST | SUBSCRIPTION
+    data:
+      time: Event timestamp
+      name: Event name
+      noun: Object type (e.g. SPACE, POST, MEMBER, REACTION)
+      verb: Action (e.g. CREATED, DELETED, UPDATED)
+      actor: The member/app that triggered the event
+      object: The affected object
+      target: The target/parent object
+      id: Unique event id
+events:
+  - name: space.created
+    noun: SPACE
+    verb: CREATED
+    description: A new space was created in the community.
+  - name: post.created
+    noun: POST
+    verb: CREATED
+    description: A post was created.
+  - name: post.deleted
+    noun: POST
+    verb: DELETED
+    description: A post was deleted.
+  - name: reaction.created
+    noun: REACTION
+    verb: CREATED
+    description: A reaction was added to a post.
+event_categories:
+  - member
+  - space membership
+  - post
+  - reaction
+  - tag
+  - collection
+  - space
+  - network
+notes: >-
+  The documented event examples are space.created, post creation/deletion, and
+  post reactions; additional member, space-membership, tag, collection, and
+  network events are documented in the per-category webhook reference. Event
+  names are normalized here as <noun>.<verb>; the canonical payload carries the
+  noun/verb pair verbatim.

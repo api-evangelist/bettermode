@@ -1,0 +1,83 @@
+# Bettermode - All-in-One Community Platform
+
+> Bettermode is the connected workspace where communities thrive and customer relationships flourish. Transform customer support into self-service communities, build engaged user bases, and accelerate growth through community-led strategies. More than 50,000 organizations worldwide use Bettermode to reduce support costs, increase customer retention, and drive product adoption through community engagement.
+
+Key terms: Community Platform, Customer Engagement, Customer Support, Self-Service, Community Management, Customer Success, Collaboration, User-Generated Content, Knowledge Base, Discussion Forums, Q&A Platform, Community Building, Customer Retention, No-Code Community, White-Label Community, Community Analytics
+
+## Core Platform Solutions
+
+- [Pricing](https://bettermode.com/pricing): Flexible community platform pricing with plans for teams of all sizes
+- [Product Overview](https://bettermode.com/product/overview): Comprehensive community platform features and capabilities
+- [Apps & Integrations](https://bettermode.com/product/apps): Extensive marketplace of apps and integrations for seamless workflows
+- [Templates](https://bettermode.com/templates): Pre-built, customizable community templates for various use cases
+- [Enterprise](https://bettermode.com/enterprise): Scalable enterprise solutions with advanced security and compliance features
+
+## Popular Alternative Comparisons
+
+- [Discord Alternatives](https://bettermode.com/blog/discord-alternatives): Community alternatives to Discord for businesses and organizations
+- [Facebook Groups Alternatives](https://bettermode.com/blog/top-free-alternatives-to-facebook-groups): Professional alternatives to Facebook Groups
+- [Circle.so Alternatives](https://bettermode.com/blog/circle-so-alternatives): Comprehensive comparison of Circle.so alternatives
+- [No-Code Platforms](https://bettermode.com/blog/best-no-code-platforms): Best no-code platforms for building communities
+- [Slack Alternatives](https://bettermode.com/blog/slack-alternatives): Community-focused alternatives to Slack
+- [Discourse Alternatives](https://bettermode.com/blog/discourse-alternatives): Modern alternatives to Discourse forums
+- [Webflow Alternatives](https://bettermode.com/blog/webflow-alternative): Community-focused website building alternatives
+
+## How-To Guides & Tutorials
+
+- [How to Create Social Media Platform](https://bettermode.com/blog/how-to-create-social-media-platform): Complete guide to building your own social platform
+- [How to Add Forum to Website](https://bettermode.com/blog/how-to-add-a-forum-to-your-website): Step-by-step guide to adding forums to websites
+- [How to Create Job Board](https://bettermode.com/blog/how-to-create-a-job-board): Build a professional job board community
+- [How to Create Social Network](https://bettermode.com/blog/how-to-create-a-social-network-website): Guide to building social networking sites
+- [How to Create Forum](https://bettermode.com/blog/how-to-create-a-forum-website): Complete forum creation guide
+- [How to Create Knowledge Base](https://bettermode.com/blog/how-to-create-a-knowledge-base): Build effective knowledge base communities
+
+## Community Building & Management
+
+- [Discussion Forums](https://bettermode.com/blog/discussion-forums): Best practices for discussion forum management
+- [Community of Practice](https://bettermode.com/blog/community-of-practice): Building and managing communities of practice
+- [Community Moderation](https://bettermode.com/blog/community-moderation): Advanced community moderation strategies and tools
+- [What is Online Community](https://bettermode.com/blog/what-is-online-community): Complete guide to online communities
+- [Community Guidelines](https://bettermode.com/blog/community-guidelines): Creating effective community guidelines
+- [Community Engagement Platform](https://bettermode.com/blog/community-engagement-platform): Strategies for community engagement
+- [Gamification Community Engagement](https://bettermode.com/blog/gamification-community-engagement): Using gamification to boost engagement
+- [Online Community Guide](https://bettermode.com/blog/online-community): Comprehensive online community building guide
+- [Niche Communities](https://bettermode.com/blog/niche-communities): Building successful niche communities
+- [Community-Led Growth](https://bettermode.com/blog/community-led-growth): Leveraging communities for business growth
+
+## Industry Solutions
+
+- [SaaS Community Solutions](https://bettermode.com/solutions/industry/saas): Customer communities for SaaS companies
+- [Education & Training](https://bettermode.com/solutions/industry/online-training-and-education): Community solutions for educational institutions
+- [Customer Engagement](https://bettermode.com/solutions/use-cases/customer-engagement): Enhance customer relationships through community
+- [Customer Self-Service](https://bettermode.com/solutions/use-cases/customer-self-service): Reduce support costs with self-service communities
+- [Help Center Solutions](https://bettermode.com/solutions/use-cases/help-center): Transform support with community-driven help centers
+
+## Popular Community Templates
+
+- [Twitter Clone Template](https://bettermode.com/templates/betterx-template-twitter-clone): Social media community template
+- [Product Hunt Clone](https://bettermode.com/templates/betterhunt-template-product-hunt-clone): Product discovery community template
+- [Facebook Clone Template](https://bettermode.com/templates/basebook-template-facebook-clone): Social networking community template
+- [Reddit-Style Template](https://bettermode.com/templates/reddify): Discussion-based community template
+- [UGC Community Template](https://bettermode.com/templates/betterhub-template-ugc-community): User-generated content community
+
+## Specialized Tools & Features
+
+- [Leaderboard Maker](https://bettermode.com/blog/leaderboard-maker): Create engaging community leaderboards
+- [Web App Builder](https://bettermode.com/blog/web-app-builder): No-code web application development
+- [Q&A Platforms](https://bettermode.com/blog/qa-platforms): Best Q&A platform solutions for communities
+- [Online Community Stats](https://bettermode.com/blog/online-community-stats): Key statistics and trends in online communities
+- [Customer Engagement Plan](https://bettermode.com/blog/customer-engagement-plan): Strategic customer engagement planning
+
+## Getting Started
+
+- [Contact Sales](https://bettermode.com/contact-sales): Speak with our team about your community needs
+- [Company Careers](https://bettermode.com/company/careers): Join the Bettermode team
+- [Hub Community](https://bettermode.com/hub/): Join Bettermode's own community for tips and support
+- [Showcase](https://bettermode.com/showcase): See real examples of successful Bettermode communities
+- [Customer Stories](https://bettermode.com/customers): Learn how organizations succeed with Bettermode
+
+## Developer Resources
+
+- [API & Webhooks](https://bettermode.com/hub/api-webhooks): Developer documentation and API access
+- [Custom Development](https://bettermode.com/product/feature-index-bettermode): Advanced customization capabilities
+- [Integration Marketplace](https://bettermode.com/product/apps): Connect with popular tools and platforms

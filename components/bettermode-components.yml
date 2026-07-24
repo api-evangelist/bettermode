@@ -1,0 +1,39 @@
+generated: '2026-07-18'
+method: searched
+source: >-
+  https://developers.bettermode.com/docs/guide/embedding/getting-started/ and the
+  @tribeplatform npm packages — client-side / embeddable surfaces for putting
+  Bettermode community UI into other products.
+description: >-
+  Bettermode exposes client-side, embeddable community UI beyond its server-side
+  GraphQL SDK: a hosted embed of the community, and React component libraries
+  (React SDK, React UI Kit, Slate Kit) used to build app blocks and custom UI
+  inside a Bettermode community.
+component_families:
+  - family: Embed
+    kind: hosted/embedded surface
+    description: >-
+      Embed a Bettermode community (or parts of it) into an existing website /
+      product. Configured from the embedding guide.
+    docs: https://developers.bettermode.com/docs/guide/embedding/getting-started/
+  - family: React SDK
+    kind: react component library
+    loader: "@tribeplatform/react-sdk"
+    description: React SDK for building on and embedding Bettermode communities.
+    registry: https://www.npmjs.com/package/@tribeplatform/react-sdk
+  - family: React UI Kit
+    kind: react component library
+    loader: "@tribeplatform/react-ui-kit"
+    description: Component library for Bettermode app / block UIs.
+    registry: https://www.npmjs.com/package/@tribeplatform/react-ui-kit
+  - family: Slate Kit
+    kind: block/layout rendering library
+    loader: "@tribeplatform/slate-kit"
+    description: Render/create/edit/validate Bettermode "slates" (block layouts) with import/export.
+    registry: https://www.npmjs.com/package/@tribeplatform/slate-kit
+  - family: Custom code / scripts
+    kind: script injection
+    description: >-
+      Custom script and Liquid-template injection into community sections for
+      bespoke client-side behavior.
+    docs: https://developers.bettermode.com/docs/guide/apps/custom-scripts/getting-started/

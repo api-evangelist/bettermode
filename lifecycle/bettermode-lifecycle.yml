@@ -1,0 +1,25 @@
+generated: '2026-07-18'
+method: searched
+source: https://developers.bettermode.com/docs/guide/graphql/
+description: >-
+  Bettermode ships a single, unversioned GraphQL endpoint per region. The schema
+  evolves additively; fields being retired are marked with GraphQL @deprecated in
+  the schema. A public status page reports platform availability. No dated,
+  numbered API-version deprecation policy is published beyond GraphQL-native
+  deprecation markers.
+versioning:
+  scheme: unversioned-graphql
+  current: v1 (single GraphQL endpoint)
+  note: No URI/date/header version selector; schema is additive.
+  endpoints:
+    us: https://api.bettermode.com
+    eu: https://api.bettermode.de
+  docs: https://developers.bettermode.com/docs/guide/graphql/getting-started/
+deprecation:
+  mechanism: GraphQL @deprecated field/enum-value directives in the schema
+  sunset_header: false
+  policy_url: https://developers.bettermode.com/docs/operations/schema/
+status_page: https://status.bettermode.com/
+sla:
+  url: https://status.bettermode.com/
+  note: Enterprise plans carry contractual SLAs; public uptime is reported on the status page.

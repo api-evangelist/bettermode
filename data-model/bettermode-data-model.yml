@@ -1,0 +1,75 @@
+generated: '2026-07-18'
+method: derived
+source: >-
+  Derived from Bettermode's documented webhook object nouns
+  (https://developers.bettermode.com/docs/guide/webhooks/getting-started/) and the
+  GraphQL guide entities. Relationships are inferred from the community domain
+  model, not from a machine-readable schema (Bettermode ships GraphQL, not
+  OpenAPI); id-prefixes/domains were not exhaustively enumerated.
+description: >-
+  Core Bettermode community entity graph: a Network (community) contains Spaces;
+  Spaces hold Posts; Members join Spaces (SpaceMembership) and author Posts;
+  Posts carry Reactions and Tags; Collections group Spaces. Grounded in the
+  webhook event nouns (SPACE, POST, MEMBER, REACTION, TAG, COLLECTION, NETWORK).
+entities:
+  - name: Network
+    description: A community (tenant). Root object; carries networkId in webhooks.
+  - name: Space
+    description: A section within a community (forum, wishlist, events, etc.).
+  - name: Post
+    description: A unit of content within a space (discussion, question, article, etc.).
+  - name: Member
+    description: A person who belongs to a community.
+  - name: SpaceMembership
+    description: Join record between a Member and a Space.
+  - name: Reaction
+    description: A reaction (like/emoji) placed on a Post.
+  - name: Tag
+    description: A label applied to posts/spaces.
+  - name: Collection
+    description: A grouping of spaces.
+relationships:
+  - from: Network
+    to: Space
+    type: has_many
+    via: networkId
+  - from: Space
+    to: Network
+    type: belongs_to
+    via: networkId
+  - from: Space
+    to: Post
+    type: has_many
+    via: spaceId
+  - from: Post
+    to: Space
+    type: belongs_to
+    via: spaceId
+  - from: Member
+    to: Post
+    type: has_many
+    via: ownerId
+  - from: Post
+    to: Member
+    type: belongs_to
+    via: ownerId
+  - from: Space
+    to: SpaceMembership
+    type: has_many
+    via: spaceId
+  - from: Member
+    to: SpaceMembership
+    type: has_many
+    via: memberId
+  - from: Post
+    to: Reaction
+    type: has_many
+    via: postId
+  - from: Post
+    to: Tag
+    type: has_many
+    via: postId
+  - from: Collection
+    to: Space
+    type: has_many
+    via: collectionId

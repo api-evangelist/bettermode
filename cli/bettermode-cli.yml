@@ -1,0 +1,22 @@
+generated: '2026-07-18'
+method: searched
+source: https://github.com/tribeplatform/cli
+docs: https://developers.bettermode.com/docs/guide/apps/getting-started/
+description: >-
+  Bettermode ships a first-party CLI, @tribeplatform/cli, for scaffolding,
+  developing, and managing Bettermode Apps against the platform. Distributed on
+  npm (the binary is catalogued in packages/).
+name: "@tribeplatform/cli"
+version: 0.1.2-alpha
+repository: https://github.com/tribeplatform/cli
+install:
+  - npm install -g @tribeplatform/cli
+purpose: Create and manage apps on the Bettermode platform.
+command_surface:
+  - group: apps
+    description: Scaffold, configure, and manage Bettermode Apps (the primary CLI use).
+notes: >-
+  The CLI is published as an alpha and targets the Apps developer workflow
+  (create/manage apps, credentials, deployment). The command tree is documented
+  in the CLI repository README; only the app-management purpose is asserted here
+  to avoid inventing subcommands.

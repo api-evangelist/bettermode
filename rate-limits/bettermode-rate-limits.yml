@@ -1,0 +1,75 @@
+specification: API Commons Rate Limits
+specificationVersion: '0.1'
+provider: Bettermode
+providerId: bettermode
+generated: '2026-07-18'
+created: '2026-07-18'
+modified: '2026-07-18'
+method: searched
+tags:
+  - Rate Limiting
+  - GraphQL
+  - Community
+description: >-
+  Bettermode's GraphQL API enforces per-plan rate limits on two windows — a
+  10-second burst window and a rolling 24-hour daily window — measured in both
+  request count and GraphQL query complexity. Limits differ by plan (Growth vs
+  Premium). Exceeding a limit returns HTTP 429 with a Retry-After header.
+sources:
+  - https://developers.bettermode.com/docs/guide/graphql/rate-limits/
+headers:
+  quotaType: X-Quota-Type
+  quotaDuration: X-Quota-Duration
+  quotaLimit: X-Quota-Limit
+  quotaRemaining: X-Quota-Remaining
+  quotaResetsAt: X-Quota-Resets-At
+  retryAfter: Retry-After
+responseCodes:
+  throttled: 429
+complexity:
+  description: >-
+    Each GraphQL field carries a complexity value (scalars/enums 0, objects 1,
+    scalar lists 1, other-type lists 5 x type complexity). Total query complexity
+    is returned in the response extensions as "complexity".
+  extension_field: complexity
+limits:
+  - name: Burst requests (Growth plan)
+    scope: network
+    metric: requests
+    limit: 100
+    timeFrame: 10 seconds
+  - name: Burst complexity (Growth plan)
+    scope: network
+    metric: complexity
+    limit: 10000
+    timeFrame: 10 seconds
+  - name: Burst requests (Premium plan)
+    scope: network
+    metric: requests
+    limit: 200
+    timeFrame: 10 seconds
+  - name: Burst complexity (Premium plan)
+    scope: network
+    metric: complexity
+    limit: 20000
+    timeFrame: 10 seconds
+  - name: Daily requests (Growth plan)
+    scope: network
+    metric: requests
+    limit: 250000
+    timeFrame: 24 hours
+  - name: Daily complexity (Growth plan)
+    scope: network
+    metric: complexity
+    limit: 25000000
+    timeFrame: 24 hours
+  - name: Daily requests (Premium plan)
+    scope: network
+    metric: requests
+    limit: 500000
+    timeFrame: 24 hours
+  - name: Daily complexity (Premium plan)
+    scope: network
+    metric: complexity
+    limit: 50000000
+    timeFrame: 24 hours

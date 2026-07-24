@@ -1,28 +1,137 @@
 aid: bettermode
 name: Bettermode
-description: 'Bettermode is a company surfaced as a portfolio company of bessemer-venture-partners, crv
-  and added to the API Evangelist network as a stub for enrichment. Sector: developer. This profile is
-  a lead awaiting the enrichment pipeline.'
+description: >-
+  Bettermode is an all-in-one customer community platform (formerly Tribe) that
+  lets organizations launch branded, no-code communities to turn engagement into
+  measurable retention and growth. It combines discussion forums, Q&A,
+  knowledge base, member directories, events, wishlists, changelogs, and roadmaps
+  with analytics and out-of-the-box integrations (Salesforce, HubSpot, Intercom,
+  Segment). For developers, Bettermode exposes a GraphQL API (US and EU regions),
+  an Apps framework with signed webhooks, embedding and custom-script surfaces,
+  first-party @tribeplatform SDKs/UI kits, and a CLI. More than 50,000
+  organizations use Bettermode. Backed by Bessemer Venture Partners and CRV.
 url: https://raw.githubusercontent.com/api-evangelist/bettermode/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
 x-backed-by:
 - bessemer-venture-partners
 - crv
-x-tier: stub
-x-tier-reason: portfolio-lead
+x-tier: enriched
+x-tier-reason: pipeline-enriched
+accessModel:
+  pricing: unknown
+  onboarding: self-serve
+  trial: false
+  try_now: false
+  public: false
+  label: Self-serve signup
+  confidence: medium
+  source:
+  - authentication
+  generated: '2026-07-22'
+  method: derived
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-18'
 tags:
-- Company
+- Community
+- Customer Community
+- Community Platform
+- Customer Engagement
+- Customer Success
+- GraphQL
+- Webhooks
+- No-Code
+- SaaS
 - Developer
-apis: []
+image: https://bettermode.com/favicon.ico
+apis:
+- name: Bettermode GraphQL API
+  description: >-
+    Bettermode's public GraphQL API for reading and writing community data —
+    spaces, posts, members, reactions, tags, and collections — plus app
+    installation and signed webhooks. Single POST endpoint per region (US / EU),
+    bearer App/Member access tokens, Relay-style cursor pagination, and
+    per-plan request + query-complexity rate limits.
+  humanURL: https://developers.bettermode.com/docs/guide/graphql/getting-started/
+  baseURL: https://api.bettermode.com
+  properties:
+  - type: Documentation
+    url: https://developers.bettermode.com/docs/guide/
+  - type: APIReference
+    url: https://developers.bettermode.com/docs/operations/schema/
+  - type: Authentication
+    url: authentication/bettermode-authentication.yml
+  - type: RateLimits
+    url: rate-limits/bettermode-rate-limits.yml
+  - type: Webhooks
+    url: asyncapi/bettermode-webhooks.yml
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: DeveloperPortal
+  url: https://developers.bettermode.com/docs/guide/
+- type: Documentation
+  url: https://developers.bettermode.com/docs/guide/
+- type: APIReference
+  url: https://developers.bettermode.com/docs/operations/schema/
+- type: GettingStarted
+  url: https://developers.bettermode.com/docs/guide/graphql/getting-started/
+- type: Authentication
+  url: authentication/bettermode-authentication.yml
+- type: Conventions
+  url: conventions/bettermode-conventions.yml
+- type: RateLimits
+  url: rate-limits/bettermode-rate-limits.yml
+- type: Lifecycle
+  url: lifecycle/bettermode-lifecycle.yml
+- type: StatusPage
+  url: https://status.bettermode.com/
+- type: Webhooks
+  url: asyncapi/bettermode-webhooks.yml
+- type: Packages
+  url: packages/bettermode-packages.yml
+- type: SDKs
+  url: packages/bettermode-packages.yml
+- type: CLI
+  url: cli/bettermode-cli.yml
+- type: Components
+  url: components/bettermode-components.yml
+- type: DataModel
+  url: data-model/bettermode-data-model.yml
+- type: LLMsTxt
+  url: llms/bettermode-llms.txt
+- type: Conformance
+  url: conformance/bettermode-conformance.yml
+- type: Compliance
+  url: https://bettermode.com/security
+- type: TrustCenter
+  url: security/bettermode-trust-center.yml
+- type: DomainSecurity
+  url: security/bettermode-domain-security.yml
+- type: GitHubOrganization
+  url: https://github.com/tribeplatform
+- type: Blog
+  url: https://bettermode.com/blog
+- type: Support
+  url: https://bettermode.com/hub/knowledge-base
+- type: Pricing
+  url: https://bettermode.com/pricing
+- type: SignUp
+  url: https://bettermode.com/account/signup
+- type: Login
+  url: https://bettermode.com/account/login
+- type: TermsOfService
+  url: https://bettermode.com/legal/terms-of-service
+- type: PrivacyPolicy
+  url: https://bettermode.com/legal/privacy-policy
 - type: Website
   url: https://bettermode.com/
+x-enrichment:
+  date: '2026-07-19'
+  status: backfilled
+  pass: local-v1
+  note: backfilled from .gitignore signal + verified work evidence

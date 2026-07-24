@@ -1,0 +1,81 @@
+generated: '2026-07-18'
+method: searched
+source: >-
+  https://developers.bettermode.com/docs/guide/graphql/ — the cross-cutting
+  request/response conventions that apply across Bettermode's GraphQL API
+  (authentication, pagination, rate-limit signaling, error envelope, webhooks
+  security), harvested from the developer docs.
+description: >-
+  How Bettermode's GraphQL API behaves across operations: a single POST GraphQL
+  endpoint per region, bearer-token auth, Relay-style cursor pagination, GraphQL
+  query-complexity accounting with quota headers, the standard GraphQL error
+  envelope, and signed webhooks. No documented idempotency-key mechanism.
+
+api_style: GraphQL over HTTPS (single endpoint, HTTP POST, JSON request/response)
+base_urls:
+  us: https://api.bettermode.com
+  eu: https://api.bettermode.de
+
+authentication:
+  scheme: Bearer token on the Authorization header
+  token_classes: [App Access Token, Member Access Token, Guest Token]
+  detail: authentication/bettermode-authentication.yml
+  docs: https://developers.bettermode.com/docs/guide/graphql/getting-started/
+
+idempotency:
+  supported: false
+  note: >-
+    Bettermode does not document an idempotency-key mechanism. GraphQL mutations
+    are not automatically idempotent; clients should guard against duplicate
+    submissions themselves.
+
+pagination:
+  style: cursor (Relay-style connections)
+  request_params:
+    first: page size (forward pagination)
+    after: opaque cursor — fetch the page after this cursor
+    last: page size (backward pagination)
+    before: opaque cursor — fetch the page before this cursor
+  response_fields:
+    edges: array of { node, cursor }
+    nodes: array of results (shortcut)
+    pageInfo: { hasNextPage, hasPreviousPage, startCursor, endCursor }
+    totalCount: total number of results
+  docs: https://developers.bettermode.com/docs/operations/schema/
+
+query_complexity:
+  supported: true
+  description: >-
+    Every GraphQL field has a complexity weight; total query complexity counts
+    against the plan's burst and daily complexity quotas and is returned in the
+    response extensions as "complexity".
+  extension_field: complexity
+  detail: rate-limits/bettermode-rate-limits.yml
+
+rate_limit_signaling:
+  headers: [X-Quota-Type, X-Quota-Duration, X-Quota-Limit, X-Quota-Remaining, X-Quota-Resets-At, Retry-After]
+  throttled_status: 429
+  detail: rate-limits/bettermode-rate-limits.yml
+  docs: https://developers.bettermode.com/docs/guide/graphql/rate-limits/
+
+error_envelope:
+  shape: >-
+    Standard GraphQL: a top-level "errors" array (each with "message", optional
+    "extensions" and "path") alongside a possibly-partial "data" object. HTTP 200
+    is returned for GraphQL-level errors; HTTP 429 for rate-limit violations.
+  docs: https://developers.bettermode.com/docs/guide/graphql/getting-started/
+
+webhooks:
+  supported: true
+  signature_header: X-Tribe-Signature
+  verification: >-
+    A challenge/response handshake at subscription time (echo the challenge
+    token) plus per-request HMAC signature verification via X-Tribe-Signature.
+  detail: asyncapi/bettermode-webhooks.yml
+  docs: https://developers.bettermode.com/docs/guide/webhooks/getting-started/
+
+versioning:
+  scheme: >-
+    Single unversioned GraphQL endpoint; schema evolution is additive with
+    GraphQL @deprecated markers on retiring fields.
+  detail: lifecycle/bettermode-lifecycle.yml
