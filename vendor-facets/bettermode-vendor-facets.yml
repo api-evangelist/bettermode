@@ -1,0 +1,161 @@
+# Vendor facets — Bettermode. The broadest of the hosted community builders on the Kin Score:
+# besides the support channel it can carry a roadmap, a changelog and an articles space, all on
+# the provider's own domain. Every one is a pointer the provider must declare and keep feeding.
+vendor: bettermode
+name: Bettermode
+website: https://bettermode.com
+areas:
+- community
+registry_keys: []
+rubric_schema_version: 0.22.0
+generated: '2026-09-25'
+features_refreshed: '2026-09-25'
+basis: capability
+summary: >-
+  Bettermode can carry four small pointer checks: support_channel (2 points), roadmap_present (2), change_log_present
+  (6) and blog_present (1), because it ships roadmap, changelog and article spaces next to the forum,
+  on a custom domain from the $149/month Starter plan. None arrives by itself. The provider must run each
+  space and declare it, and a forum declared as Community earns half of support_channel because the pointer
+  probe does not read that type. There is no registry key, so Bettermode customers cannot be detected
+  or measured.
+features:
+- id: community-spaces
+  name: Discussion, Q&A and help-center spaces
+  description: Threaded discussion, question-and-answer and help-center spaces in one branded community.
+  source: https://bettermode.com/product/feature-index-bettermode
+  tier: all
+- id: custom-domain
+  name: Custom domain
+  description: Moves the community onto the provider's own domain or subdomain; listed in the Starter
+    plan.
+  source: https://bettermode.com/pricing
+  tier: paid
+- id: roadmap-space
+  name: Roadmap visualization with idea voting
+  description: >-
+    An interactive roadmap of planned work, fed by submitted and upvoted feature requests (the Podders
+    template).
+  source: https://bettermode.com/templates/podders-template-customer-feedback-community
+  tier: unknown
+- id: changelog-space
+  name: Changelog and product-update spaces
+  description: A space type that keeps "a record of every notable change", alongside product-update announcements.
+  source: https://bettermode.com/product/feature-index-bettermode
+  tier: unknown
+- id: articles-space
+  name: Articles space
+  description: A space type for long-format posts and blogs.
+  source: https://bettermode.com/product/feature-index-bettermode
+  tier: unknown
+maps:
+- feature: community-spaces
+  check: support_channel
+  layer: composite
+  credit: 0.5
+  provider_must: >-
+    Declare the community URL in apis.yml common[]. As Community it grades "unverified" (0.5) because
+    probe-pointers.py does not probe Community; a help-center space declared as HelpCenter or Support
+    is probed and earns 1.0 when live.
+  catalog_pass_rate: 0.45
+  facet: developer_ergonomics
+  points: 2
+  baseline_pass_rate: 0.69
+- feature: roadmap-space
+  check: roadmap_present
+  layer: composite
+  provider_must: Keep the roadmap space current and public, and declare its URL as RoadMap.
+  catalog_pass_rate: 0.011
+  facet: operational_transparency
+  points: 2
+  baseline_pass_rate: 0.037
+- feature: changelog-space
+  check: change_log_present
+  layer: composite
+  provider_must: Post dated entries for API changes in the changelog space and declare its URL as ChangeLog.
+  catalog_pass_rate: 0.157
+  facet: operational_transparency
+  points: 6
+  baseline_pass_rate: 0.438
+- feature: articles-space
+  check: blog_present
+  layer: composite
+  provider_must: Publish articles there and declare the space URL as Blog.
+  catalog_pass_rate: 0.529
+  facet: developer_ergonomics
+  points: 1
+  baseline_pass_rate: 0.731
+out_of_reach:
+  checks:
+  - contract_present
+  - status_page_present
+  - sdk_count_1
+  - documentation_present
+  note: >-
+    The community's own API and webhooks are Bettermode's; it cannot produce the provider's contract,
+    status page or SDKs.
+surface:
+  operational_transparency:
+    reachable: 8.0
+    total: 38
+  developer_ergonomics:
+    reachable: 2.0
+    total: 42
+  agent_readiness:
+    reachable: 0
+    total: 139
+hard_rule: >-
+  A model, not a score. Adopting this vendor changes a provider's Kin Score only when the provider publishes
+  the resulting artifacts on its own surface; nothing here writes a score, and no sponsorship or partnership
+  can.
+method: searched
+source:
+- https://bettermode.com/pricing
+- https://bettermode.com/product/feature-index-bettermode
+- https://bettermode.com/templates/podders-template-customer-feedback-community
+measured:
+  cohort:
+    method: vendors-catalog.json detections (CNAME / header / URL shape / markup), never a name match
+    detected: 0
+    in_baseline: 0
+  control:
+    basis: providers earning contract_present + documentation_present + api_reference_present, minus the
+      cohort
+    n: 5216
+  metric: >-
+    cohort_pct / control_pct = mean share of the check's points earned (derived and platform credit weighted),
+    x100
+  measured_on: '2026-09-25'
+  status: 'not measurable: 0 detected customers clear the baseline (need 20)'
+simulation:
+  simulated_on: '2026-09-25'
+  rubric: 0.23.0
+  population: providers publishing a contract (contract_present earned), replayable exactly
+  providers: 8977
+  providers_unreplayable: 987
+  providers_moved: 8842
+  conditional_rows: excluded (they depend on what the API already does)
+  composite_lift:
+    median: 2.8
+    p75: 3.2
+    p90: 3.7
+    max: 3.8
+    mean_among_movers: 2.4
+  agent_readiness_lift:
+    median: 0.0
+    p75: 0.0
+    p90: 0.0
+    max: 0.0
+    mean_among_movers: 0.0
+  facet_lift_median_among_movers:
+    operational_transparency: 21.0
+    developer_ergonomics: 2.4
+  composite_band_moves:
+    thin -> developing: 938
+    developing -> strong: 332
+    emerging -> thin: 230
+    strong -> exemplar: 82
+    minimal -> emerging: 2
+  agent_readiness_band_moves: {}
+  method: >-
+    each provider's own kin/checks file, the vendor's maps at their stated credit, the scorer's composite
+    formula; from -> to, nothing written
