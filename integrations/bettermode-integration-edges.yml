@@ -25,23 +25,6 @@ edges:
     builder: unknown (not in the directory record)
   detected_by: sweep-workflow-automation.py
   first_seen: '2026-10-15'
-- partner_name: Zoom (own)
-  partner: zoom
-  partner_match: mirror
-  mirror_match: domain
-  type: marketplace
-  relationship: platform-app
-  direction: third-party
-  channel: partner-built
-  marketplace: own
-  evidence: https://marketplace.zoom.us/apps/Rigymf3-SMqYrllWc1BpyQ
-  mirror_of: zoom/integrations/zoom-integration-edges.yml
-  apps:
-  - Bettermode
-  listing_count: 1
-  detected: '2026-10-18'
-  detected_by: mirror-platform-listings.py
-  category: Zoom app
 - partner_name: npm registry
   partner: npm
   partner_match: register
@@ -102,6 +85,40 @@ edges:
     detected: '2026-10-20'
   detected_by: sweep-official-clis.py
   first_seen: '2026-10-20'
+- partner_name: Zoom (own)
+  partner: zoom
+  partner_match: mirror
+  mirror_match: domain
+  type: marketplace
+  relationship: platform-app
+  direction: third-party
+  channel: partner-built
+  marketplace: own
+  evidence: https://marketplace.zoom.us/apps/Rigymf3-SMqYrllWc1BpyQ
+  mirror_of: zoom/integrations/zoom-integration-edges.yml
+  apps:
+  - Bettermode
+  listing_count: 1
+  detected: '2026-10-18'
+  detected_by: mirror-platform-listings.py
+  category: Zoom app
+- partner_name: Intercom (own)
+  partner: intercom
+  partner_match: mirror
+  mirror_match: domain
+  type: marketplace
+  relationship: platform-app
+  direction: third-party
+  channel: partner-built
+  marketplace: own
+  evidence: https://www.intercom.com/app-store/?app_package_code=tribe-new
+  mirror_of: intercom/integrations/intercom-integration-edges.yml
+  apps:
+  - Bettermode
+  listing_count: 1
+  detected: '2026-10-23'
+  detected_by: mirror-platform-listings.py
+  category: Marketing & Campaigns
 method: searched
 checked:
 - https://api.nuget.org/v3
@@ -118,5 +135,6 @@ checked:
 - https://rubygems.org/api/v1
 - https://zapier.com/api/v4/apps/
 - zoom/integrations/zoom-integration-edges.yml
+- intercom/integrations/intercom-integration-edges.yml
 source:
 - https://zapier.com/api/v4/apps/
